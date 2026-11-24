@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: youshop-incident-copilot
+  threads:
+    virtual:
+      enabled: true
+  mvc:
+    problemdetails:
+      enabled: true
+
+youshop:
+  cors:
+    allowed-origins: http://localhost:5173
+  telemetry:
+    mock:
+      # incidentId -> id do cenário (1..4)
+      incidents:
+        INC-1001: 1   # Falha no Checkout (P0)
+        INC-1002: 2   # Fraude em Cadastro de Produto (P1)
+        INC-1003: 3   # Divergência de Atribuição a Creators (P2)
+        INC-1004: 4   # Falha no Repasse de Comissões (P0)
+      sentry-enabled: true
+      grafana-enabled: true
+      noise-log-lines: 3
+      simulated-latency: 150ms
+      seed: 42

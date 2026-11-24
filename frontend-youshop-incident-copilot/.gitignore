@@ -1,0 +1,13 @@
+# Node / React
+**/node_modules/
+**/dist/
+**/.nodeenv/
+**/.env
+**/.env.local
+
+# IDEs e Sistema
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
